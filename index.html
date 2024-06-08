@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Player</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-<body>
-  <div class="wrapper">
-    <div class="top-bar">
-      <span>Now Playing</span>
-    </div>
-    <div class="img-area">
-      <img id="coverimg" alt="">
-    </div>
-    <div class="song-details">
-      <p class="name"></p>
-      <p class="artist"></p>
-    </div>
-    <div class="progress-area">
-      <div class="progress-bar">
-        <audio id="main-audio" src=""></audio>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top-bar">
+        <span>Now Playing</span>
       </div>
-      <div class="song-timer">
-        <span class="current-time">0:00</span>
-        <span class="max-duration">0:00</span>
+      <div class="img-area">
+        <img id="coverimg" alt="" />
       </div>
-    </div>
-    <div class="controls">
-      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
-      <i id="prev" class="material-icons">skip_previous</i>
-      <div class="play-pause">
-        <i class="material-icons play">play_arrow</i>
+      <div class="song-details">
+        <p class="name"></p>
+        <p class="artist"></p>
       </div>
-      <i id="next" class="material-icons">skip_next</i>
-      <i id="shuffle" class="material-icons" title="Shuffle playlist">shuffle</i>
-      <i id="more-music" class="material-icons">queue_music</i>
-    </div>
-    <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="1">
-    <div class="music-list">
-      <div class="header">
-        <div class="row">
-          <i class="list material-icons">queue_music</i>
-          <span>Music list</span>
+      <div class="progress-area">
+        <div class="progress-bar">
+          <audio id="main-audio" src=""></audio>
         </div>
-        <i id="close" class="material-icons">close</i>
+        <div class="song-timer">
+          <span class="current-time">0:00</span>
+          <span class="max-duration">0:00</span>
+        </div>
       </div>
-      <ul>
-        <!-- here li list are coming from js -->
-      </ul>
+      <div class="controls">
+        <i id="repeat-plist" class="material-icons" title="Playlist looped"
+          >repeat</i
+        >
+        <i id="prev" class="material-icons">skip_previous</i>
+        <div class="play-pause">
+          <i class="material-icons play">play_arrow</i>
+        </div>
+        <i id="next" class="material-icons">skip_next</i>
+        <i id="shuffle" class="material-icons" title="Shuffle playlist"
+          >shuffle</i
+        >
+        <i id="more-music" class="material-icons">queue_music</i>
+      </div>
+      <input
+        type="range"
+        id="volume-slider"
+        class="volume-slider"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1"
+      />
+      <div class="music-list">
+        <div class="header">
+          <div class="row">
+            <i class="list material-icons">queue_music</i>
+            <span>Music list</span>
+          </div>
+          <i id="close" class="material-icons">close</i>
+        </div>
+        <ul></ul>
+      </div>
     </div>
-  </div>
 
-  <script src="music-list.js"></script>
-  <script src="script.js"></script>
-
-</body>
+    <script src="music-list.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
