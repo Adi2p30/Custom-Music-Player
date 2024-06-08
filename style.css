@@ -27,11 +27,11 @@ body {
   background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
   background-size: cover;
   background-position: center;
-  overflow:visible;
+  overflow: visible;
   background-repeat: repeat;
 }
 body::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -261,4 +261,121 @@ ul li .audio-duration {
 ul li.playing {
   pointer-events: none;
   color: var(--violet);
+}
+:root {
+  --thumb-size: 20px; /* Size of the slider thumb */
+  --track-height: 6px; /* Height of the slider track */
+  --primary-color: #749bff; /* The color for the filled portion of the track */
+  --secondary-color: #0e336a; /* The color for the unfilled portion of the track */
+  --thumb-color: #ffffff; /* The color of the slider thumb */
+  --thumb-border: #000000; /* The border color of the slider thumb */
+  --card-background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Background color of the card */
+}
+
+/* General styles for the volume control container */
+.volume-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+  width: 100%;
+  max-width: 200px; /* Adjust as needed */
+}
+
+/* Styles for the range input (volume bar) */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: var(--track-height);
+  background: transparent;
+  position: relative;
+}
+
+/* Track styles */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: var(--track-height);
+  background: var(--secondary-color);
+  border-radius: 3px;
+  position: relative;
+}
+
+/* Fill styles before the thumb */
+input[type="range"]::-webkit-slider-runnable-track::before {
+  content: "";
+  height: var(--track-height);
+  background: var(--primary-color);
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(var(--value) * 100%);
+  z-index: 1;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: var(--track-height);
+  background: var(--secondary-color);
+  border-radius: 3px;
+  position: relative;
+}
+
+input[type="range"]::-moz-range-progress {
+  background: var(--primary-color);
+  height: var(--track-height);
+  border-radius: 3px;
+}
+
+/* Thumb styles */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: var(--thumb-size);
+  width: var(--thumb-size);
+  border-radius: 50%;
+  background: var(--thumb-color);
+  border: 2px solid var(--thumb-border);
+  cursor: pointer;
+  position: relative;
+  margin-top: calc(
+    (var(--track-height) - var(--thumb-size)) / 2
+  ); /* Center the thumb */
+  z-index: 2; /* Ensure the thumb is above the fill */
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: var(--thumb-size);
+  width: var(--thumb-size);
+  border-radius: 50%;
+  background: var(--thumb-color);
+  border: 2px solid var(--thumb-border);
+  cursor: pointer;
+  position: relative;
+  z-index: 2; /* Ensure the thumb is above the fill */
+}
+
+/* Focus styles */
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track::before {
+  background: var(--primary-color);
+}
+
+/* Custom property to dynamically update the fill width */
+input[type="range"] {
+  --value: 0.5; /* Default value */
+}
+
+/* JavaScript to update the custom property based on the input value */
+.volume-icon {
+  font-size: 24px;
+  color: var(--thumb-color); /* Match the color of the slider thumb */
+  margin-right: 10px; /* Adjust as needed to separate from the slider */
 }

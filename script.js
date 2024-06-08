@@ -30,7 +30,7 @@ function loadMusic(indexNumb) {
   musicArtist.innerText = music.artist;
   musicImg.src = `${music.img}`;
   mainAudio.src = `music/${music.src}`; // Assign src to mainAudio
-  
+
   // Set the background image of the body with a blur effect
   document.body.style.backgroundImage = `url(${music.img})`;
 }
@@ -186,3 +186,10 @@ function formatTime(seconds) {
   const secs = Math.floor(seconds % 60);
   return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
 }
+
+const rangeInput = document.getElementById("volume-bar");
+
+rangeInput.addEventListener("input", (e) => {
+  const value = e.target.value;
+  e.target.style.setProperty("--value", value);
+});
