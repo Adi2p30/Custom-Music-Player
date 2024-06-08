@@ -200,7 +200,7 @@ let allMusic = [
   {
     name: "Chicago Freestyle",
     artist: "Drake · Giveon",
-    img: "https://i.ytimg.com/vi/V0Yc_24Biqg/sddefault.jpg?sqp=-oaymwEWCKoDEPABIAQqCghqEJQEGHgg6AJIWg&rs=AOn4CLD3Jf6QpisRsZ9E5vQjjgyYxCjMbA",
+    img: "https://lh3.googleusercontent.com/9oQVb_Z0MFVzRqxZPj4UFcUjq75C2saiHVb-f6ON3vRsaFp5cSVgdCdkK51aTBIozkkjRGYB4YnyvGw=w544-h544-l90-rj",
     src: "Chicago_Freestyle.mp3"
   },
   {
@@ -224,7 +224,7 @@ let allMusic = [
   {
     name: "One Dance",
     artist: "Drake · WizKid · Kyla",
-    img: "https://i.ytimg.com/vi/l77QZhvhYlU/hq720.jpg?sqp=-oaymwEXCNUGEOADIAQqCwjVARCqCBh4INgESFo&rs=AOn4CLAfG5kdFon892tD9nOHFuswPw77Vw",
+    img: "https://i.ytimg.com/vi/LaewsgbyMo0/hq720.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBcgEyh_MA8=&rs=AOn4CLBXN1uJHe7B8GUMSxfus_lzgVv5iw",
     src: "One_Dance.mp3"
   },
   {
@@ -320,7 +320,7 @@ let allMusic = [
   {
     name: "Hotline Bling",
     artist: "Drake",
-    img: "https://lh3.googleusercontent.com/zOaDpfj2eyVVe1WX6_hRirEI0DZxghCjpg-wVOebZK3FS_Q7MJKddQ2z5MGLqcUlcWN9RlJME34xpRuA=w544-h544-l90-rj",
+    img: "https://lh3.googleusercontent.com/LRARcNBegn5EbAg62HKIShH_o7CCkgZ2oViTvTR__isRqxP1Thr-qSBbGWEmKbHs9ZvI8abKUwV4bIeIjg=w544-h544-l90-rj",
     src: "Hotline_Bling.mp3"
   },
   {
@@ -380,7 +380,7 @@ let allMusic = [
   {
     name: "Can't Hold Us (feat. Ray Dalton)",
     artist: "Macklemore & Ryan Lewis · Macklemore · Ryan Lewis · Ray Dalton",
-    img: "https://lh3.googleusercontent.com/5Dt1VgiyVNWLWGgndoxXi0CrGPuj2Z5pLGQTnExEHST6uJGvAqD1AnNGGdnN7pv419jrLeZJM6NJGPht=w544-h544-l90-rj",
+    img: "https://lh3.googleusercontent.com/Ond7bzyvLRgppE6e31TdY8T3R1JDC5dZOdPZjb1cPoB49HDwhoZknvgkFAFvO2YISdg8UQjcs9bK9UQ5=w544-h544-l90-rj",
     src: "Can't_Hold_Us_(feat._Ray_Dalton).mp3"
   },
   {

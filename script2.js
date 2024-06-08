@@ -27,44 +27,8 @@ window.addEventListener("load", ()=>{
 function loadMusic(indexNumb){
   musicName.innerText = allMusic[indexNumb].name;
   musicArtist.innerText = allMusic[indexNumb].artist;
-  musicImg.src = `${allMusic[indexNumb].img}`;
+  document.getElementById('coverimg').src = `${allMusic[indexNumb].img}`;
   mainAudio.src = `music/${allMusic[indexNumb].src}`; // Assign src to mainAudio
-  
-  // Get the <ul> element inside the music list
-  const ulTag = musicList.querySelector("ul");
-  
-  // Clear any existing list items
-  ulTag.innerHTML = '';
-  
-  // Create list items for each song and append them to the <ul> element
-  allMusic.forEach((song, index) => {
-    const liTag = document.createElement("li");
-    liTag.setAttribute("li-index", index);
-
-    // Create an audio element to get the duration
-    const audio = new Audio();
-    audio.src = `music/${song.src}.mp3`;
-    audio.onloadedmetadata = () => {
-      liTag.querySelector(".audio-duration").innerText = formatTime(audio.duration);
-    };
-
-    liTag.innerHTML = `
-      <div class="row">
-        <span>${song.name}</span>
-        <p>${song.artist}</p>
-      </div>
-      <span class="audio-duration">Loading...</span>
-    `;
-
-    liTag.addEventListener("click", () => {
-      const index = parseInt(liTag.getAttribute("li-index"));
-      musicIndex = index;
-      loadMusic(musicIndex);
-      playMusic();
-    });
-
-    ulTag.appendChild(liTag);
-  });
 }
 
 function playMusic(){
@@ -160,8 +124,7 @@ mainAudio.addEventListener("ended", ()=>{
   if (isRepeat) {
     mainAudio.currentTime = 0;
     playMusic();
-  } else
-  {
+  } else {
     nextMusic();
   }
 });
@@ -190,11 +153,10 @@ moreMusicBtn.addEventListener("click", () => {
     const liTag = document.createElement("li");
     liTag.setAttribute("li-index", index);
 
-    // Create an audio element to get the duration
-    const audio = new Audio();
-    audio.src = `music/${song.src}.mp3`;
-    audio.onloadedmetadata = () => {
-      liTag.querySelector(".audio-duration").innerText = formatTime(audio.duration);
+    const possible = new Audio();
+    possible.src = `music/${song.src}.mp3`;
+    possible.onloadedmetadata = () => {
+      liTag.querySelector(".audio-duration").innerText = formatTime(possible.duration);
     };
 
     liTag.innerHTML = `
@@ -202,17 +164,20 @@ moreMusicBtn.addEventListener("click", () => {
         <span>${song.name}</span>
         <p>${song.artist}</p>
       </div>
-      <span class="audio-duration">Loading...</span>
+      <span class="audio-duration">${formatTime(0)}</span>
     `;
 
-    liTag.addEventListener("click", () => {
-      const index = parseInt(liTag.getAttribute("li-index"));
+    ulTag.appendChild(liTag);
+  });
+
+  // Add click event listeners to each list item to play the corresponding song
+  ulTag.querySelectorAll("li").forEach((li) => {
+    li.addEventListener("click", () => {
+      const index = parseInt(li.getAttribute("li-index"));
       musicIndex = index;
       loadMusic(musicIndex);
       playMusic();
     });
-
-    ulTag.appendChild(liTag);
   });
 });
 
