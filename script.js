@@ -29,9 +29,7 @@ function loadMusic(indexNumb) {
   musicName.innerText = music.name;
   musicArtist.innerText = music.artist;
   musicImg.src = `${music.img}`;
-  mainAudio.src = `music/${music.src}`; // Assign src to mainAudio
-
-  // Set the background image of the body with a blur effect
+  mainAudio.src = `music/${music.src}`;
   document.body.style.backgroundImage = `url(${music.img})`;
 }
 
@@ -149,7 +147,6 @@ moreMusicBtn.addEventListener("click", () => {
 function updateMusicList() {
   const ulTag = musicList.querySelector("ul");
 
-  // Clear any existing list items
   ulTag.innerHTML = "";
   allMusic.forEach((song, index) => {
     const liTag = document.createElement("li");
