@@ -48,12 +48,6 @@ let allMusic = [
     src: "Cinderella.mp3"
   },
   {
-    name: "Addiction",
-    artist: "RØZE",
-    img: "https://lh3.googleusercontent.com/7oIJyhm7a_ucAG9Pof9dUwvEkoK9Urz1TH5DzqkbmBmTMWO_Ebll3PZ9fRFqwpU9G-ReC5fw5440gb4=w544-h544-l90-rj",
-    src: "Addiction.mp3"
-  },
-  {
     name: "MIDDLE CHILD",
     artist: "J. Cole",
     img: "https://lh3.googleusercontent.com/bS7RtcdD884zMSfG6bap6RqjSQ6YMEDN7sY_OX4y3j0dtJZ5cojYhYtP9De9abML8G_BCZtJyHMSyZlQ=w544-h544-l90-rj",
@@ -180,12 +174,6 @@ let allMusic = [
     src: 'Moves_Like_Jagger_(Studio_Recording_From_"The_Voice"_Performance).mp3'
   },
   {
-    name: "Remember That Night?",
-    artist: "Sara Kays",
-    img: "https://lh3.googleusercontent.com/KrEYtEU8ZF-4YaAssYenYNyd_dJQkwEJiD5EcDlqsEjPAX2H3vdGH3pnEtaR_h921k_HMcXVP7U1sSi7=w544-h544-l90-rj",
-    src: "Remember_That_Night?.mp3"
-  },
-  {
     name: "River",
     artist: "Eminem · Ed Sheeran",
     img: "https://lh3.googleusercontent.com/b-euORTq-_MSzc3SyI0QOjLqnCBJbWuMmH1YlyJKAVvJfOpPqv3bFH-KSDoQwV9e8Xey1X2NRo9xZ2U=w544-h544-l90-rj",
@@ -252,12 +240,6 @@ let allMusic = [
     src: "It's_You.mp3"
   },
   {
-    name: "I Know What You Did Last Summer",
-    artist: "Shawn Mendes · Camila Cabello",
-    img: "https://i.ytimg.com/vi/ch6yYaix5uw/hq720.jpg?sqp=-oaymwEXCNUGEOADIAQqCwjVARCqCBh4INgESFo&rs=AOn4CLA-LYNT4rY-kxp5ZULoSgfQGfhLBA",
-    src: "I_Know_What_You_Did_Last_Summer.mp3"
-  },
-  {
     name: "King Kunta",
     artist: "Kendrick Lamar",
     img: "https://lh3.googleusercontent.com/TYKrUWKVX2KO1ULKXRCPnl0NqFvS4KES8-h6YliXCnuFbS_mFjZ6GQCXw7R9jK7Myuk5ErdPtBKj63eh=w544-h544-l90-rj",
@@ -300,12 +282,6 @@ let allMusic = [
     src: "Trance.mp3"
   },
   {
-    name: "South of the Border (feat. Camila Cabello & Cardi B)",
-    artist: "Ed Sheeran · Camila Cabello · Cardi B",
-    img: "https://lh3.googleusercontent.com/2rSqxXTYIox46twhc2zC73tSPuzHz9XBx04tojSXQmXN4SK7NgYdwX5PgqcX7reoPG_3WrjnIu-hbm5G=w544-h544-l90-rj",
-    src: "South_of_the_Border_(feat._Camila_Cabello_&_Cardi_B).mp3"
-  },
-  {
     name: "Heartless",
     artist: "The Weeknd",
     img: "https://lh3.googleusercontent.com/ZEfx3kQ3n-yy2QlXHVfNoqDwZq74fMe2S3A-uQETIjGnspiVAMzZzyLla99-O9tX4RgmAm5f5nSvuy4v=w544-h544-l90-rj",
@@ -334,12 +310,6 @@ let allMusic = [
     artist: "SZA",
     img: "https://lh3.googleusercontent.com/o3i9-dA34xDjbw1hz4nhJO6LA6V4-ZYjs_kh7aUA0sq1pieJejt_Hnor-Rxl77GA1ugAFqxcmEUwy3c=w544-h544-l90-rj",
     src: "SOS.mp3"
-  },
-  {
-    name: "One Of The Girls",
-    artist: "The Weeknd · JENNIE · Lily Rose Depp",
-    img: "https://lh3.googleusercontent.com/mxqDOrw4zbfDBdd4kOnD2qBUtMklnAucEfrQUbr30pRLie0P3JIhJhBJ9wJq3NEeg2yVrT9lgrYid-w=w544-h544-l90-rj",
-    src: "One_Of_The_Girls.mp3"
   },
   {
     name: "Mona Lisa",
@@ -412,12 +382,6 @@ let allMusic = [
     artist: "Roddy Ricch",
     img: "https://lh3.googleusercontent.com/mCjduPWc4GvReWhFy04ufFgkBt9be4XRjwkeCwRZu0XaaKk1-lRqPjjQ-5gk0rMjEoBl19QZS7p-RA=w544-h544-l90-rj",
     src: "The_Box.mp3"
-  },
-  {
-    name: "Espresso",
-    artist: "Sabrina Carpenter",
-    img: "https://lh3.googleusercontent.com/fhDgRO0LrPPo9CDqsLQlxR3CVZc8xPmSi9Ja8DKAS5zhoWsZKdj2scyWqBUU2t4DHxK1xcbWKY2Q7cpj=w544-h544-l90-rj",
-    src: "Espresso.mp3"
   },
   {
     name: "Watch This (ARIZONATEARS Pluggnb Remix)",
