@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 *::before,
 *::after {
   padding: 0;
   margin: 0;
 }
+
 :root {
   --pink: #ec529a;
   --violet: #410e6a;
@@ -18,29 +21,40 @@
   --darkwhite: #cecaca;
   --pinkshadow: #21909b;
   --lightbshadow: rgba(0, 0, 0, 0.15);
+  --thumb-size: 20px;
+  --track-height: 6px;
+  --primary-color: #749bff;
+  --secondary-color: #0e336a;
+  --thumb-color: #ffffff;
+  --thumb-border: #000000;
+  --card-background: rgba(255, 255, 255, 0.8);
+  
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 102vh;
-  background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+  min-height: 100vh;
+  background-image: url('your-image-url.jpg'); /* Add your background image URL here */
   background-size: cover;
   background-position: center;
-  overflow: visible;
-  background-repeat: repeat;
+  backdrop-filter: blur(15px);;
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  filter: blur(15px);
-  z-index: -1;
-}
+
 .wrapper {
   width: 380px;
   padding: 25px 30px;
@@ -49,10 +63,14 @@ body::before {
   border-radius: 15px;
   background: var(--white);
   box-shadow: 0px 6px 15px var(--lightbshadow);
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
 }
+
 .wrapper i {
   cursor: pointer;
 }
+
 .top-bar,
 .progress-area .song-timer,
 .controls,
@@ -62,18 +80,22 @@ body::before {
   align-items: center;
   justify-content: space-between;
 }
+
 .top-bar i {
   font-size: 30px;
   color: var(--lightblack);
 }
+
 .top-bar i:first-child {
   margin-left: -7px;
 }
+
 .top-bar span {
   font-size: 18px;
   margin-left: -3px;
   color: var(--lightblack);
 }
+
 .img-area {
   width: 100%;
   height: 256px;
@@ -82,26 +104,32 @@ body::before {
   border-radius: 15px;
   box-shadow: 0px 6px 12px var(--lightbshadow);
 }
+
 .img-area img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .song-details {
   text-align: center;
   margin: 30px 0;
 }
+
 .song-details p {
   color: var(--lightblack);
 }
+
 .song-details .name {
   font-size: 21px;
 }
+
 .song-details .artist {
   font-size: 18px;
   opacity: 0.9;
   line-height: 35px;
 }
+
 .progress-area {
   height: 6px;
   width: 100%;
@@ -109,6 +137,7 @@ body::before {
   background: #f0f0f0;
   cursor: pointer;
 }
+
 .progress-area .progress-bar {
   height: inherit;
   width: 0%;
@@ -116,6 +145,7 @@ body::before {
   border-radius: inherit;
   background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
 }
+
 .progress-bar::before {
   content: "";
   position: absolute;
@@ -131,20 +161,25 @@ body::before {
   background: inherit;
   transition: opacity 0.2s ease;
 }
+
 .progress-area:hover .progress-bar::before {
   opacity: 1;
   pointer-events: auto;
 }
+
 .progress-area .song-timer {
   margin-top: 2px;
 }
+
 .song-timer span {
   font-size: 13px;
   color: var(--lightblack);
 }
+
 .controls {
   margin: 40px 0 5px 0;
 }
+
 .controls i {
   font-size: 28px;
   user-select: none;
@@ -153,16 +188,20 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .controls i:nth-child(2),
 .controls i:nth-child(4) {
   font-size: 43px;
 }
+
 .controls #prev {
   margin-right: -13px;
 }
+
 .controls #next {
   margin-left: -13px;
 }
+
 .controls .play-pause {
   height: 54px;
   width: 54px;
@@ -174,6 +213,7 @@ body::before {
   background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
   box-shadow: 0px 0px 5px var(--pink);
 }
+
 .play-pause::before {
   position: absolute;
   content: "";
@@ -182,6 +222,7 @@ body::before {
   border-radius: inherit;
   background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
 }
+
 .play-pause i {
   height: 43px;
   width: 43px;
@@ -208,35 +249,43 @@ body::before {
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.15s ease-out;
 }
+
 .music-list.show {
   bottom: 0;
   opacity: 1;
   pointer-events: auto;
 }
+
 .header .row {
   display: flex;
   align-items: center;
   font-size: 19px;
   color: var(--lightblack);
 }
+
 .header .row i {
   cursor: default;
 }
+
 .header .row span {
   margin-left: 5px;
 }
+
 .header #close {
   font-size: 22px;
   color: var(--lightblack);
 }
+
 .music-list ul {
   margin: 10px 0;
   max-height: 260px;
   overflow: auto;
 }
+
 .music-list ul::-webkit-scrollbar {
   width: 0px;
 }
+
 .music-list ul li {
   list-style: none;
   display: flex;
@@ -246,48 +295,37 @@ body::before {
   color: var(--lightblack);
   border-bottom: 1px solid #e5e5e5;
 }
+
 .music-list ul li:last-child {
   border-bottom: 0px;
 }
+
 .music-list ul li .row span {
   font-size: 17px;
 }
+
 .music-list ul li .row p {
   opacity: 0.9;
 }
+
 ul li .audio-duration {
   font-size: 16px;
 }
+
 ul li.playing {
   pointer-events: none;
   color: var(--violet);
 }
-:root {
-  --thumb-size: 20px; /* Size of the slider thumb */
-  --track-height: 6px; /* Height of the slider track */
-  --primary-color: #749bff; /* The color for the filled portion of the track */
-  --secondary-color: #0e336a; /* The color for the unfilled portion of the track */
-  --thumb-color: #ffffff; /* The color of the slider thumb */
-  --thumb-border: #000000; /* The border color of the slider thumb */
-  --card-background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Background color of the card */
-}
 
-/* General styles for the volume control container */
 .volume-control {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 20px;
   width: 100%;
-  max-width: 200px; /* Adjust as needed */
+  max-width: 200px;
 }
 
-/* Styles for the range input (volume bar) */
 input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
@@ -296,7 +334,6 @@ input[type="range"] {
   position: relative;
 }
 
-/* Track styles */
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: var(--track-height);
@@ -305,7 +342,6 @@ input[type="range"]::-webkit-slider-runnable-track {
   position: relative;
 }
 
-/* Fill styles before the thumb */
 input[type="range"]::-webkit-slider-runnable-track::before {
   content: "";
   height: var(--track-height);
@@ -332,7 +368,6 @@ input[type="range"]::-moz-range-progress {
   border-radius: 3px;
 }
 
-/* Thumb styles */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: var(--thumb-size);
@@ -342,10 +377,8 @@ input[type="range"]::-webkit-slider-thumb {
   border: 2px solid var(--thumb-border);
   cursor: pointer;
   position: relative;
-  margin-top: calc(
-    (var(--track-height) - var(--thumb-size)) / 2
-  ); /* Center the thumb */
-  z-index: 2; /* Ensure the thumb is above the fill */
+  margin-top: calc((var(--track-height) - var(--thumb-size)) / 2);
+  z-index: 2;
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -356,10 +389,9 @@ input[type="range"]::-moz-range-thumb {
   border: 2px solid var(--thumb-border);
   cursor: pointer;
   position: relative;
-  z-index: 2; /* Ensure the thumb is above the fill */
+  z-index: 2;
 }
 
-/* Focus styles */
 input[type="range"]:focus {
   outline: none;
 }
@@ -368,14 +400,12 @@ input[type="range"]:focus::-webkit-slider-runnable-track::before {
   background: var(--primary-color);
 }
 
-/* Custom property to dynamically update the fill width */
 input[type="range"] {
-  --value: 0.5; /* Default value */
+  --value: 0.5;
 }
 
-/* JavaScript to update the custom property based on the input value */
 .volume-icon {
   font-size: 24px;
-  color: var(--thumb-color); /* Match the color of the slider thumb */
-  margin-right: 10px; /* Adjust as needed to separate from the slider */
+  color: var(--thumb-color);
+  margin-right: 10px;
 }
